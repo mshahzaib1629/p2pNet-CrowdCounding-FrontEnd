@@ -11,11 +11,12 @@ function PredictionPage() {
 
   async function getCrowdCount() {
     try {
-      message.info("Scanning your image...");
+      message.loading("Scanning your image...");
       setIsLoading(true);
       const formData = new FormData();
       formData.append("imageFile", inputImage);
-      const apiEndPoint = "http://192.168.1.10:5000/predict";
+      const host = localStorage.getItem("host");
+      const apiEndPoint = `http://${host}/predict`;
       const result = await axios.post(apiEndPoint, formData, {
         enctype: "multipart/form-data",
       });
