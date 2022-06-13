@@ -29,7 +29,7 @@ function WebLayout() {
           textAlign: "center",
         }}
       >
-        Ant Design ©2018 Created by Ant UED
+        Developed with ❤️ in Lahore, Pakistan
       </Footer>
     </Layout>
   );
